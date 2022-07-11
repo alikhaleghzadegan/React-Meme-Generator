@@ -1,5 +1,8 @@
 
-import MemeCarousel from "./MemeCarousel";
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import MemeCards from "./MemeCards";
 import useMemes from "./services/useMemes";
 
 function App() {
@@ -9,8 +12,14 @@ function App() {
 
   return (
     <div className="App">
-      <h2>Hello</h2>
-      <MemeCarousel memes={memes} />
+      <Container>
+        <Row>
+          <Col>
+            <MemeCards memes={memes} />
+          </Col>
+        </Row>
+      </Container>
+
     </div>
   );
 }
